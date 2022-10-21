@@ -13,11 +13,13 @@ int[] FillArray(int num)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length;)
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine("[{0}]", string.Join(", ", arr));
-        break;
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
     } 
+    Console.WriteLine("]");
 }
 int[] myArr = FillArray(8);
 PrintArray(myArr);
